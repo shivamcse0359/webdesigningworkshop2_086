@@ -1,0 +1,39 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.booking-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.booking-form input {
+  padding: 10px;
+}
+
+.booking-form button {
+  padding: 12px;
+  background: #1b2163;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.flight-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.flight-card button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
