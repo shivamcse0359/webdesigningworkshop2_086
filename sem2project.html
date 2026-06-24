@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteX</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        border: border-box;
+    }
+    .navbar{
+        height: 100px;
+        background-color: #C4C4C4;
+        color: white;
+        display: flex;
+    }
+    .nav-logo{
+        height: 50px;
+        width: 150px;
+        padding: 10px;
+    }
+    .logo{
+        background-image: url("routeXlogo.png");
+        background-size: cover;
+        height: 50px;
+        }
+    .theme-line{
+        color: rgb(58, 146, 58);
+    }
+    .nav-links {
+    display:flex;
+    gap:1rem;
+    margin-left: 400px;
+    margin-top: 25px;
+    
+}
+a{
+    color:rgb(58, 146, 58);
+    border-radius:8px;
+    padding:.5rem .75rem;
+    border-radius:8px;
+    text-decoration:none;
+    margin: 7px;
+}
+.login{
+    margin-top: 20px;  
+}
+.login-line{
+    color: rgb(20, 20, 79);
+    margin-top: 35px;
+    font-size:larger;
+    font-weight: bolder;
+}
+.select-booking{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.name{
+    text-align: center;
+    padding: 8px;
+}
+    .hero {
+      background: #1b2163;
+      padding: 50px 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+.selected{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color:#1b2163;
+    border-radius: 20px;
+}
+.background-pic{
+     background-image: url("backgroundimg.png");
+     padding: 2%;
+}
+ .booking-card {
+      background:#F2F0EF;
+      width: 600px;
+      border-radius: 10px;
+      padding: 25px;
+      margin-left: 300px;
+      margin-top: 30px;
+      box-shadow: 0 4px 10px rgba(155, 95, 95, 0.15);
+    }
+.form-row1{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+.form-row2{
+    display: flex;
+}
+    .form-group label {
+      font-size: 17px;
+    }
+
+    .form-group input {
+      width: 110%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #4e3232;
+      margin: 10px;
+    }
+
+    .search-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background: #1b2163;
+      border: none;
+      color: #ffffff;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor:pointer;
+    }
+
+    .search-btn:hover {
+      background: #369233;
+    }
+ .offers {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .offers h2 {
+      margin-bottom: 20px;
+    }
+
+    .offer-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .offer {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .offer h3 {
+      color: rgb(58, 146, 58);
+      margin-bottom: 10px;
+    }
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+h1 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.flight-route {
+    border: 1px solid #aab4b0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 500px;
+    margin-left: 50px;
+}
+
+.city-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.city-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #0056b3;
+}
+
+p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.ro-1{
+    display: flex;
+}
+.ro-2{
+    display: flex;
+}
+.ro-3{
+    display: flex;
+}
+.ro-4{
+    display: flex;
+}
+.ro-5{
+    display: flex;
+}
+
+    footer {
+      background: #D3D3D3;
+      color: #1b2163;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bolder;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+</style>
+<body>
+    <header>
+    <div class="navbar">
+  <div class="nav-logo">
+    <div class="logo"></div>
+  <span class="theme-line">Tickets Made Simple</span>
+ </div>
+        <nav class="nav-links">
+        <a href="#">Deals</a>
+        <a href="#">Support</a>
+        <a href="#">My Trips</a>
+         <a href="#">Last Transaction</a>
+        </nav>
+        <span class="login"><img src="https://images.ixigo.com/image/upload/Header/9fcafc6b32ac191685d067086c6072e3-cyrbh.webp" height="60px"></span>
+        <nav class="login-line"><p href="#">Login/SignUp</p></nav>
+        </div>
+        </header>
+        
+  <section class="hero">
+    <h1>Book Flights, Trains, Buses & Hotels</h1>
+    <p>Compare prices and book with confidence</p>
+  </section>
+    <div class="background-pic">
+    <section class="booking-card">
+        <div class="select-booking">
+    <a href="/hotels" class="hotel-booking">
+   <span class="icon"><img src="https://images.ixigo.com/image/upload/Header/2fa9ebf005adc1ed6473d6229aedfaa5-dwtqq.webp" height="60px">
+       </span>
+     </a>
+   <p class="name booking-hotels">Hotels</p>
+    <div class="selected"><a href="/flight" class="flight-booking">
+     <span class="icon"><img src="https://images.ixigo.com/image/upload/Header/2af43f961dddc6cfb02254712f0df058-rbzyb.webp" height="60px">
+</span></a>
+ <p class="name booking-fights">Flights</p></div>
+   <span class="icon"> <a href="/train" class="train-booking">
+    <img src="https://images.ixigo.com/image/upload/Header/d2db102bf758f425496336d908a598b8-dttji.webp" height="60px">
+     </span></a>
+      <p class="name booking-trains">Trains</p>
+ <a href="/bus" class="bus-booking">
+        <span class="icon"> <img src="https://images.ixigo.com/image/upload/Header/23928375e30875ccd2ba5613aae81763-qqyww.webp" height="60px">
+   </span> </a>
+     <p class="name booking-buses">Buses</p>
+   </div>
+   <hr><br>
+   <div class="form-row1">
+      <div class="form-group">
+        <label>From</label>
+        <input type="text" placeholder="City or Airport">
+      </div>
+      <div class="form-group">
+        <label>To</label>
+        <input type="text" placeholder="City or Airport">
+      </div>
+      </div>
+      <div class="form-row1">
+      <div class="form-group">
+        <label>Departure</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>Return</label>
+        <input type="date">
+      </div>
+    </div>
+
+    <button class="search-btn">Search</button>
+  </section>
+   </section>
+    </div>
+    <section class="offers">
+    <h2>Best Offers</h2>
+    <div class="offer-cards">
+        <div class="offer">
+        <h3>Hotel Deals</h3>
+        <p>Up to 40% off on hotels.</p>
+      </div>
+      <div class="offer">
+        <h3>Flight Offer</h3>
+        <p>Save up to ₹1500 on domestic flights.</p>
+      </div>
+      <div class="offer">
+        <h3>Train Cashback</h3>
+        <p>Get cashback on train bookings.</p>
+      </div>
+      <div class="offer">
+        <h3>Bus Cards</h3>
+        <p>Get Discount at Civil Lines.</p>
+      </div>
+    </div>
+  </section>
+ <div class="container">
+        <h1>Popular Flight Routes</h1>
+        <br>
+        <div class="ro-1">
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/79ee38cdbe961dccc3474b0bb92a3e06-nehrw.png" alt="Mumbai icon" class="city-icon">
+                <h2>Mumbai Flights</h2>
+            </div>
+            <p>To: <a href="#">Goa</a> · <a href="#">Delhi</a> · <a href="#">Bangalore</a> · <a href="#">Ahmedabad</a></p>
+        </div>
+        
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/4c3658a4867b64f0cd3806ba996b65b9-hgqbk.png" alt="Delhi icon" class="city-icon">
+                <h2>Delhi Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Goa</a> · <a href="#">Bangalore</a> · <a href="#">Pune</a></p>
+        </div>
+        </div>
+        <div class="ro-2">
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/2aa9b6f5152b47e8fe6f3c6869005b64-kwkop.png" alt="Kolkata icon" class="city-icon">
+                <h2>Kolkata Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Delhi</a> · <a href="#">Bangalore</a> · <a href="#">Bagdogra</a></p>
+        </div>
+  
+  
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/d68be4fa4a16e49ad3c604ff56a6e381-aavhe.png" alt="Chennai icon" class="city-icon">
+                <h2>Chennai Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Delhi</a> · <a href="#">Madurai</a> · <a href="#">Coimbatore</a></p>
+        </div>
+         </div>
+         <div class="ro-3">
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/233a5d159be13a22fe3c08f5d2843886-znstx.png" alt="Hyderabad icon" class="city-icon">
+                <h2>Hyderabad Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Goa</a> · <a href="#">Bangalore</a> · <a href="#">Delhi</a></p>
+        </div>
+       
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/flightshome/ff1243e5e4925d7d2a0b7132efd1f028-dyasj.png" alt="Ahmedabad icon" class="city-icon">
+                <h2>Ahmedabad Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Delhi</a> · <a href="#">Bangalore</a> · <a href="#">Goa</a></p>
+        </div>
+  </div>
+  <div class="ro-4">
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/home/d924fcc85d0901057de8bc07a01321c9-ycbdq.png" alt="Bangalore icon" class="city-icon">
+                <h2>Bangalore Flights</h2>
+            </div>
+            <p>To: <a href="#">Mumbai</a> · <a href="#">Delhi</a> · <a href="#">Goa</a> · <a href="#">Hyderabad</a></p>
+        </div>
+        
+        <div class="flight-route">
+            <div class="city-header">
+                <img src="https://images.ixigo.com/image/upload/home/63de17e2b3f2163c39ccffdb7b1ad719-oikej.png" alt="Pune icon" class="city-icon">
+                <h2>Pune Flights</h2>
+            </div>
+            <p>To: <a href="#">Goa</a> · <a href="#">Delhi</a> · <a href="#">Bangalore</a> · <a href="#">Nagpur</a></p>
+        </div>
+</div></div>
+  <footer>
+    <p> &copy; 2025 RouteX(Ticket Booking Website)  |  HTML & CSS only |  All Rights Are Reserved.</p><br>
+    <p>Created By : Shivam Mourya @2025B01010359 | My WEBD Sem-1 Project</p>
+  </footer>
+<script src="App.js"></script>
+</body>
+</html>
